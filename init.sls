@@ -5,7 +5,7 @@
     - mode: 755
     - makedirs: True
 
-/git_demo/aws1:
+/git_demo/aws2:
   file.directory:
     - user: root
     - group: root
@@ -14,7 +14,7 @@
     - onlyif:
       - test -d /demo
 
-/git_demo/aws1/index.html:
+/git_demo/aws2/index.html:
   file.managed:
     - user: root
     - group: root
@@ -22,4 +22,4 @@
     - contents: 
       - "Check"
     - onlyif:
-      - test -d /demo/aws1
+      - test -d /demo/aws2
