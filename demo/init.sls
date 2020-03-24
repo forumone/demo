@@ -14,12 +14,12 @@
     - onlyif:
       - test -d /demo
 
-/git_demo/base/index.html:
+/git_demo/base/base.txt:
   file.managed:
     - user: root
     - group: root
     - mode: 644
     - contents: 
-      - "Check"
+      - "THIS IS BASE"
     - onlyif:
       - test -d /demo/base
