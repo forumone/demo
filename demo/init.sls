@@ -24,7 +24,16 @@
     - onlyif:
       - test -d /demo/aws1
 
-/git_demo/aws1/version.txt:
+/git_demo/aws:
+  file.directory:
+    - user: root
+    - group: root
+    - mode: 755
+    - makedirs: True
+    - onlyif:
+      - test -d /demo
+
+/git_demo/aws/version.txt:
   file.managed:
     - user: root
     - group: root
@@ -32,4 +41,4 @@
     - contents: 
       - "THIS IS AWS1"
     - onlyif:
-      - test -d /demo/aws1
+      - test -d /demo/aws
