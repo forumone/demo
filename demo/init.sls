@@ -14,12 +14,22 @@
     - onlyif:
       - test -d /demo
 
-/git_demo/aws1/index.html:
+/git_demo/aws1/aws1.txt:
   file.managed:
     - user: root
     - group: root
     - mode: 644
     - contents: 
-      - "Check"
+      - "THIS IS AWS1"
+    - onlyif:
+      - test -d /demo/aws1
+
+/git_demo/aws1/version.txt:
+  file.managed:
+    - user: root
+    - group: root
+    - mode: 644
+    - contents: 
+      - "THIS IS AWS1"
     - onlyif:
       - test -d /demo/aws1
